@@ -107,6 +107,7 @@ public:
 	void set_pow(fe* b, num* e);
 	void set_div(fe* a, fe* b);
 	void set_double_pow_mul(fe* b1, num* e1, fe* b2, num* e2);
+	void neg();
 	void export_to_bytes(uint8_t* buf);
 	void import_from_bytes(uint8_t* buf);
 	void sample_fe_from_bytes(uint8_t* buf, uint32_t bytelen);

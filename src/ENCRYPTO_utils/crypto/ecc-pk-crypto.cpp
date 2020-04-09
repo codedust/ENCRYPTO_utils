@@ -206,6 +206,12 @@ void ecc_fe::set_double_pow_mul(fe* b1, num* e1, fe* b2, num* e2) {
 	eb_mul_sim(val, eb_b1, bn_e1, eb_b2, bn_e2);
 }
 
+void ecc_fe::neg() {
+	core_set(context);
+
+	eb_neg(val, val);
+}
+
 void ecc_fe::import_from_bytes(uint8_t* buf) {
 	core_set(context);
 
